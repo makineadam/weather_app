@@ -12,6 +12,10 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="weather_app"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCrgu7G0eLCyGQguT10S-fwmC4VZ-BHAxc"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

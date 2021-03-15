@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/makin/AndroidStudioProjects/weather_app/lib/screens/main_body.dart';
+import 'package:weather_app/screens/main_body.dart';
+import 'package:flutter/cupertino.dart';
 
 //Colors
 Color clearPink = Color(0xFFFFCACA);
@@ -25,6 +26,28 @@ int cloudyIconSize = 380;
 var statusBarColor = clearPink;
 
 const apiKey = 'ac8fd06439a8c2fa55bc9cdda377675b';
+const apiKey2 = '1851339ee4961ffd55df1886d56761fa';
+
+const kTextFieldDecoration = InputDecoration(
+  hintText: 'Enter your desired city.',
+
+  enabledBorder: OutlineInputBorder(
+    borderSide: BorderSide(color: Colors.transparent),
+    borderRadius: BorderRadius.all(Radius.circular(30))
+  ),
+
+  focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.transparent),
+      borderRadius: BorderRadius.all(Radius.circular(30))
+  ),
+
+  prefixIcon: Icon(CupertinoIcons.search,color: Colors.white,),
+
+  filled: true,
+  fillColor: Colors.black26,
+
+);
+
 
 
 

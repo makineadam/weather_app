@@ -31,12 +31,14 @@ class _LoadingScreenState extends State<LoadingScreen> {
     latitude = location.latitude;
     longitude = location.longitude;
 
-    NetworkHelper networkHelper = NetworkHelper('http://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey&units=metric');
+    NetworkHelper networkHelper = NetworkHelper('https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey&units=metric');
+    NetworkHelper networkHelper2 = NetworkHelper('https://api.openweathermap.org/data/2.5/onecall?lat=$latitude&lon=$longitude&appid=$apiKey2&units=metric');
 
     var weatherData = await networkHelper.getData();
+    var daysWeatherData = await networkHelper2.getData();
 
     Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return HomePage(locationWeather: weatherData,);
+      return HomePage(locationWeather: weatherData, daysWeather: daysWeatherData,);
     }));
 
   }
