@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttericon/font_awesome_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:icon_shadow/icon_shadow.dart';
 import 'package:flutter/services.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
@@ -103,7 +105,33 @@ class _MainBodyState extends State<MainBody> {
             pageController: transformerPageController,
             itemBuilder: (context, index) {
               if (index == 0) {
-                return ContainerWidget(statusBarColor: widget.statusBarColor,date: widget.date,place: widget.place,weatherCondition: widget.weatherCondition,temperature: widget.temperature,moisture: widget.moisture,wind: widget.wind,icon: widget.icon,iconSize: widget.iconSize,iconColor: widget.iconColor,iconPositionedTop: widget.iconPositionedTop,iconPositionedBottom: widget.iconPositionedBottom,iconPositionedLeft: widget.iconPositionedLeft,iconPositionedRight: widget.iconPositionedRight, textPositionedTop: widget.textPositionedTop,textPositionedBottom: widget.textPositionedBottom,textPositionedLeft: widget.textPositionedLeft,textPositionedRight: widget.textPositionedRight,iconAlignment: widget.iconAlignment,lineWidth: widget.lineWidth,searchButtonColor: widget.searchButtonColor);
+                return Stack(
+                  children: [
+                    ContainerWidget(statusBarColor: widget.statusBarColor,date: widget.date,place: widget.place,weatherCondition: widget.weatherCondition,temperature: widget.temperature,moisture: widget.moisture,wind: widget.wind,icon: widget.icon,iconSize: widget.iconSize,iconColor: widget.iconColor,iconPositionedTop: widget.iconPositionedTop,iconPositionedBottom: widget.iconPositionedBottom,iconPositionedLeft: widget.iconPositionedLeft,iconPositionedRight: widget.iconPositionedRight, textPositionedTop: widget.textPositionedTop,textPositionedBottom: widget.textPositionedBottom,textPositionedLeft: widget.textPositionedLeft,textPositionedRight: widget.textPositionedRight,iconAlignment: widget.iconAlignment,lineWidth: widget.lineWidth,searchButtonColor: widget.searchButtonColor),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: allHeight*0.05),
+                      child: Container(
+                        alignment: AlignmentDirectional.bottomCenter,
+                        child: FloatingActionButton.extended(
+                          elevation: 2,
+                          label: Row(
+                            children: [
+                              Text("Next Days",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
+                              Icon(CupertinoIcons.forward,color: Colors.white),
+                            ],
+                          ),
+                          backgroundColor: widget.searchButtonColor,
+                          onPressed: (){
+                            transformerPageController.animateToPage(1,
+                              duration: Duration(milliseconds: 400),
+                              curve: Curves.easeInCirc,
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                );
               }
               else if (index == 1) {
                 return Container(
@@ -125,17 +153,62 @@ class _MainBodyState extends State<MainBody> {
                     children: [
                       Padding(
                         padding: EdgeInsets.only(top: allHeight*0.1, bottom: allHeight*0.03),
-                        child: Text("Next 7 Days",style: TextStyle(fontSize: allWidth*0.06, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa')),
+                        child: Padding(
+                          padding: EdgeInsets.only(right: allWidth*0.06),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap: (){
+                                  transformerPageController.animateToPage(0,duration: Duration(milliseconds: 250),curve: Curves.easeInCirc);
+                                },
+                                child: Container(
+                                    height: allWidth*0.14,
+                                    width: allWidth*0.14,
+                                    child: Icon(FontAwesomeIcons.arrowLeft,size: allWidth*0.05,)),
+                              ),
+                              Text("Next 7 Days",style: TextStyle(fontSize: allWidth*0.07, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa')),
+                            ],
+                          ),
+                        ),
                       ),
                       Column(
                         children: [
-                          SummaryCard(cardColor: widget.statusBarColor, cardDate: widget.date, cardIcon: widget.icon, cardTemperature: widget.temperature),
-                          SummaryCard(cardColor: widget.statusBarColor2, cardDate: widget.date2, cardIcon: widget.icon2, cardTemperature: widget.temperature2),
-                          SummaryCard(cardColor: widget.statusBarColor3, cardDate: widget.date3, cardIcon: widget.icon3, cardTemperature: widget.temperature3),
-                          SummaryCard(cardColor: widget.statusBarColor4, cardDate: widget.date4, cardIcon: widget.icon4, cardTemperature: widget.temperature4),
-                          SummaryCard(cardColor: widget.statusBarColor5, cardDate: widget.date5, cardIcon: widget.icon5, cardTemperature: widget.temperature5),
-                          SummaryCard(cardColor: widget.statusBarColor6, cardDate: widget.date6, cardIcon: widget.icon6, cardTemperature: widget.temperature6),
-                          SummaryCard(cardColor: widget.statusBarColor7, cardDate: widget.date7, cardIcon: widget.icon7, cardTemperature: widget.temperature7),
+                          GestureDetector(
+                              onTap: () {
+                                transformerPageController.animateToPage(2,duration: Duration(milliseconds: 400),curve: Curves.easeInCirc);
+                              },
+                              child: SummaryCard(cardColor: widget.statusBarColor2, cardDate: widget.date2, cardIcon: widget.icon2, cardTemperature: widget.temperature2, cardIconColor: widget.iconColor2)),
+                          GestureDetector(
+                              onTap: () {
+                                transformerPageController.animateToPage(3,duration: Duration(milliseconds: 400),curve: Curves.easeInCirc);
+                              },
+                              child: SummaryCard(cardColor: widget.statusBarColor3, cardDate: widget.date3, cardIcon: widget.icon3, cardTemperature: widget.temperature3, cardIconColor: widget.iconColor3)),
+                          GestureDetector(
+                              onTap: () {
+                                transformerPageController.animateToPage(4,duration: Duration(milliseconds: 400),curve: Curves.easeInCirc);
+                              },
+                              child: SummaryCard(cardColor: widget.statusBarColor4, cardDate: widget.date4, cardIcon: widget.icon4, cardTemperature: widget.temperature4, cardIconColor: widget.iconColor4)),
+                          GestureDetector(
+                              onTap: () {
+                                transformerPageController.animateToPage(5,duration: Duration(milliseconds: 400),curve: Curves.easeInCirc);
+                              },
+                              child: SummaryCard(cardColor: widget.statusBarColor5, cardDate: widget.date5, cardIcon: widget.icon5, cardTemperature: widget.temperature5, cardIconColor: widget.iconColor5)),
+                          GestureDetector(
+                              onTap: () {
+                                transformerPageController.animateToPage(6,duration: Duration(milliseconds: 400),curve: Curves.easeInCirc);
+                              },
+                              child: SummaryCard(cardColor: widget.statusBarColor6, cardDate: widget.date6, cardIcon: widget.icon6, cardTemperature: widget.temperature6, cardIconColor: widget.iconColor6)),
+                          GestureDetector(
+                              onTap: () {
+                                transformerPageController.animateToPage(7,duration: Duration(milliseconds: 400),curve: Curves.easeInCirc);
+                              },
+                              child: SummaryCard(cardColor: widget.statusBarColor7, cardDate: widget.date7, cardIcon: widget.icon7, cardTemperature: widget.temperature7, cardIconColor: widget.iconColor7)),
+                          GestureDetector(
+                              onTap: () {
+                                transformerPageController.animateToPage(8,duration: Duration(milliseconds: 400),curve: Curves.easeInCirc);
+                              },
+                              child: SummaryCard(cardColor: widget.statusBarColor8, cardDate: widget.date8, cardIcon: widget.icon8, cardTemperature: widget.temperature8, cardIconColor: widget.iconColor8)),
                         ],
                       ),
                     ],

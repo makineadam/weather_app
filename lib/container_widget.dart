@@ -156,24 +156,6 @@ class ContainerWidget extends StatelessWidget {
               ),
             ],
           ),
-          //Search button
-          Padding(
-            padding: EdgeInsets.only(top: allHeight*0.02),
-            child: FloatingActionButton.extended(
-              heroTag: 'search_icon',
-              elevation: 2,
-              icon: Icon(
-                CupertinoIcons.search,color: Colors.white,),
-              label: Text("Search City",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
-              backgroundColor: searchButtonColor,
-              onPressed: (){
-
-                //Navigator.of(context).push(createRoute());
-
-              },
-            ),
-
-          ),
         ],
       ),
     );
