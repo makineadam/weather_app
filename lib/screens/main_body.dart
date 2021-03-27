@@ -45,13 +45,17 @@ class MainBody extends StatefulWidget {
             this.date5,this.place5,this.weatherCondition5,this.temperature5,this.moisture5,this.wind5,this.icon5,this.statusBarColor5,this.iconSize5,this.iconColor5,this.iconPositionedTop5,this.iconPositionedBottom5,this.iconPositionedLeft5,this.iconPositionedRight5,this.textPositionedTop5,this.textPositionedBottom5,this.textPositionedLeft5,this.textPositionedRight5,this.iconAlignment5,this.lineWidth5,this.searchButtonColor5,
             this.date6,this.place6,this.weatherCondition6,this.temperature6,this.moisture6,this.wind6,this.icon6,this.statusBarColor6,this.iconSize6,this.iconColor6,this.iconPositionedTop6,this.iconPositionedBottom6,this.iconPositionedLeft6,this.iconPositionedRight6,this.textPositionedTop6,this.textPositionedBottom6,this.textPositionedLeft6,this.textPositionedRight6,this.iconAlignment6,this.lineWidth6,this.searchButtonColor6,
             this.date7,this.place7,this.weatherCondition7,this.temperature7,this.moisture7,this.wind7,this.icon7,this.statusBarColor7,this.iconSize7,this.iconColor7,this.iconPositionedTop7,this.iconPositionedBottom7,this.iconPositionedLeft7,this.iconPositionedRight7,this.textPositionedTop7,this.textPositionedBottom7,this.textPositionedLeft7,this.textPositionedRight7,this.iconAlignment7,this.lineWidth7,this.searchButtonColor7,
-            this.date8,this.place8,this.weatherCondition8,this.temperature8,this.moisture8,this.wind8,this.icon8,this.statusBarColor8,this.iconSize8,this.iconColor8,this.iconPositionedTop8,this.iconPositionedBottom8,this.iconPositionedLeft8,this.iconPositionedRight8,this.textPositionedTop8,this.textPositionedBottom8,this.textPositionedLeft8,this.textPositionedRight8,this.iconAlignment8,this.lineWidth8,this.searchButtonColor8,});
+            this.date8,this.place8,this.weatherCondition8,this.temperature8,this.moisture8,this.wind8,this.icon8,this.statusBarColor8,this.iconSize8,this.iconColor8,this.iconPositionedTop8,this.iconPositionedBottom8,this.iconPositionedLeft8,this.iconPositionedRight8,this.textPositionedTop8,this.textPositionedBottom8,this.textPositionedLeft8,this.textPositionedRight8,this.iconAlignment8,this.lineWidth8,this.searchButtonColor8,
+            this.maxTemp2, this.maxTemp3, this.maxTemp4, this.maxTemp5, this.maxTemp6, this.maxTemp7, this.maxTemp8,
+            this.minTemp2, this.minTemp3, this.minTemp4, this.minTemp5, this.minTemp6, this.minTemp7, this.minTemp8,});
 
   final Color statusBarColor,statusBarColor2,statusBarColor3,statusBarColor4,statusBarColor5,statusBarColor6,statusBarColor7,statusBarColor8;
   final String date,date2,date3,date4,date5,date6,date7,date8;
   final String place,place2,place3,place4,place5,place6,place7,place8;
   final String weatherCondition,weatherCondition2,weatherCondition3,weatherCondition4,weatherCondition5,weatherCondition6,weatherCondition7,weatherCondition8;
   final String temperature,temperature2,temperature3,temperature4,temperature5,temperature6,temperature7,temperature8;
+  final String maxTemp2,maxTemp3,maxTemp4,maxTemp5,maxTemp6,maxTemp7,maxTemp8;
+  final String minTemp2,minTemp3,minTemp4,minTemp5,minTemp6,minTemp7,minTemp8;
   final String moisture,moisture2,moisture3,moisture4,moisture5,moisture6,moisture7,moisture8;
   final String wind,wind2,wind3,wind4,wind5,wind6,wind7,wind8;
   final IconData icon,icon2,icon3,icon4,icon5,icon6,icon7,icon8;
@@ -123,7 +127,7 @@ class _MainBodyState extends State<MainBody> {
                           backgroundColor: widget.searchButtonColor,
                           onPressed: (){
                             transformerPageController.animateToPage(1,
-                              duration: Duration(milliseconds: 400),
+                              duration: Duration(milliseconds: 300),
                               curve: Curves.easeInCirc,
                             );
                           },
@@ -219,7 +223,7 @@ class _MainBodyState extends State<MainBody> {
                 return Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    ContainerWidget2(statusBarColor: widget.statusBarColor2,date: widget.date2,place: widget.place2,weatherCondition: widget.weatherCondition2,temperature: widget.temperature2,moisture: widget.moisture2,wind: widget.wind2,icon: widget.icon2,iconSize: widget.iconSize2,iconColor: widget.iconColor2,iconPositionedTop: widget.iconPositionedTop2,iconPositionedBottom: widget.iconPositionedBottom2,iconPositionedLeft: widget.iconPositionedLeft2,iconPositionedRight: widget.iconPositionedRight2, textPositionedTop: widget.textPositionedTop2,textPositionedBottom: widget.textPositionedBottom2,textPositionedLeft: widget.textPositionedLeft2,textPositionedRight: widget.textPositionedRight2,iconAlignment: widget.iconAlignment2,lineWidth: widget.lineWidth2,searchButtonColor: widget.searchButtonColor2),
+                    ContainerWidget2(statusBarColor: widget.statusBarColor2,date: widget.date2,place: widget.place2,weatherCondition: widget.weatherCondition2,temperature: widget.temperature2,moisture: widget.moisture2,wind: widget.wind2,icon: widget.icon2,iconSize: widget.iconSize2,iconColor: widget.iconColor2,iconPositionedTop: widget.iconPositionedTop2,iconPositionedBottom: widget.iconPositionedBottom2,iconPositionedLeft: widget.iconPositionedLeft2,iconPositionedRight: widget.iconPositionedRight2, textPositionedTop: widget.textPositionedTop2,textPositionedBottom: widget.textPositionedBottom2,textPositionedLeft: widget.textPositionedLeft2,textPositionedRight: widget.textPositionedRight2,iconAlignment: widget.iconAlignment2,lineWidth: widget.lineWidth2,searchButtonColor: widget.searchButtonColor2,minTemp: widget.minTemp2,maxTemp: widget.maxTemp2),
                     Padding(
                       padding: EdgeInsets.only(bottom: allHeight*0.05),
                       child: Container(
@@ -246,7 +250,7 @@ class _MainBodyState extends State<MainBody> {
                 return Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    ContainerWidget2(statusBarColor: widget.statusBarColor3,date: widget.date3,place: widget.place3,weatherCondition: widget.weatherCondition3,temperature: widget.temperature3,moisture: widget.moisture3,wind: widget.wind3,icon: widget.icon3,iconSize: widget.iconSize3,iconColor: widget.iconColor3,iconPositionedTop: widget.iconPositionedTop3,iconPositionedBottom: widget.iconPositionedBottom3,iconPositionedLeft: widget.iconPositionedLeft3,iconPositionedRight: widget.iconPositionedRight3, textPositionedTop: widget.textPositionedTop3,textPositionedBottom: widget.textPositionedBottom3,textPositionedLeft: widget.textPositionedLeft3,textPositionedRight: widget.textPositionedRight3,iconAlignment: widget.iconAlignment3,lineWidth: widget.lineWidth3,searchButtonColor: widget.searchButtonColor3),
+                    ContainerWidget2(statusBarColor: widget.statusBarColor3,date: widget.date3,place: widget.place3,weatherCondition: widget.weatherCondition3,temperature: widget.temperature3,moisture: widget.moisture3,wind: widget.wind3,icon: widget.icon3,iconSize: widget.iconSize3,iconColor: widget.iconColor3,iconPositionedTop: widget.iconPositionedTop3,iconPositionedBottom: widget.iconPositionedBottom3,iconPositionedLeft: widget.iconPositionedLeft3,iconPositionedRight: widget.iconPositionedRight3, textPositionedTop: widget.textPositionedTop3,textPositionedBottom: widget.textPositionedBottom3,textPositionedLeft: widget.textPositionedLeft3,textPositionedRight: widget.textPositionedRight3,iconAlignment: widget.iconAlignment3,lineWidth: widget.lineWidth3,searchButtonColor: widget.searchButtonColor3,minTemp: widget.minTemp3,maxTemp: widget.maxTemp3),
                     Padding(
                       padding: EdgeInsets.only(bottom: allHeight*0.05),
                       child: Container(
@@ -273,7 +277,7 @@ class _MainBodyState extends State<MainBody> {
                 return Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    ContainerWidget2(statusBarColor: widget.statusBarColor4,date: widget.date4,place: widget.place4,weatherCondition: widget.weatherCondition4,temperature: widget.temperature4,moisture: widget.moisture4,wind: widget.wind4,icon: widget.icon4,iconSize: widget.iconSize4,iconColor: widget.iconColor4,iconPositionedTop: widget.iconPositionedTop4,iconPositionedBottom: widget.iconPositionedBottom4,iconPositionedLeft: widget.iconPositionedLeft4,iconPositionedRight: widget.iconPositionedRight4, textPositionedTop: widget.textPositionedTop4,textPositionedBottom: widget.textPositionedBottom4,textPositionedLeft: widget.textPositionedLeft4,textPositionedRight: widget.textPositionedRight4,iconAlignment: widget.iconAlignment4,lineWidth: widget.lineWidth4,searchButtonColor: widget.searchButtonColor4),
+                    ContainerWidget2(statusBarColor: widget.statusBarColor4,date: widget.date4,place: widget.place4,weatherCondition: widget.weatherCondition4,temperature: widget.temperature4,moisture: widget.moisture4,wind: widget.wind4,icon: widget.icon4,iconSize: widget.iconSize4,iconColor: widget.iconColor4,iconPositionedTop: widget.iconPositionedTop4,iconPositionedBottom: widget.iconPositionedBottom4,iconPositionedLeft: widget.iconPositionedLeft4,iconPositionedRight: widget.iconPositionedRight4, textPositionedTop: widget.textPositionedTop4,textPositionedBottom: widget.textPositionedBottom4,textPositionedLeft: widget.textPositionedLeft4,textPositionedRight: widget.textPositionedRight4,iconAlignment: widget.iconAlignment4,lineWidth: widget.lineWidth4,searchButtonColor: widget.searchButtonColor4,minTemp: widget.minTemp4,maxTemp: widget.maxTemp4),
                     Padding(
                       padding: EdgeInsets.only(bottom: allHeight*0.05),
                       child: Container(
@@ -300,7 +304,7 @@ class _MainBodyState extends State<MainBody> {
                 return Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    ContainerWidget2(statusBarColor: widget.statusBarColor5,date: widget.date5,place: widget.place5,weatherCondition: widget.weatherCondition5,temperature: widget.temperature5,moisture: widget.moisture5,wind: widget.wind5,icon: widget.icon5,iconSize: widget.iconSize5,iconColor: widget.iconColor5,iconPositionedTop: widget.iconPositionedTop5,iconPositionedBottom: widget.iconPositionedBottom5,iconPositionedLeft: widget.iconPositionedLeft5,iconPositionedRight: widget.iconPositionedRight5, textPositionedTop: widget.textPositionedTop5,textPositionedBottom: widget.textPositionedBottom5,textPositionedLeft: widget.textPositionedLeft5,textPositionedRight: widget.textPositionedRight5,iconAlignment: widget.iconAlignment5,lineWidth: widget.lineWidth5,searchButtonColor: widget.searchButtonColor5),
+                    ContainerWidget2(statusBarColor: widget.statusBarColor5,date: widget.date5,place: widget.place5,weatherCondition: widget.weatherCondition5,temperature: widget.temperature5,moisture: widget.moisture5,wind: widget.wind5,icon: widget.icon5,iconSize: widget.iconSize5,iconColor: widget.iconColor5,iconPositionedTop: widget.iconPositionedTop5,iconPositionedBottom: widget.iconPositionedBottom5,iconPositionedLeft: widget.iconPositionedLeft5,iconPositionedRight: widget.iconPositionedRight5, textPositionedTop: widget.textPositionedTop5,textPositionedBottom: widget.textPositionedBottom5,textPositionedLeft: widget.textPositionedLeft5,textPositionedRight: widget.textPositionedRight5,iconAlignment: widget.iconAlignment5,lineWidth: widget.lineWidth5,searchButtonColor: widget.searchButtonColor5,minTemp: widget.minTemp5,maxTemp: widget.maxTemp5),
                     Padding(
                       padding: EdgeInsets.only(bottom: allHeight*0.05),
                       child: Container(
@@ -327,7 +331,7 @@ class _MainBodyState extends State<MainBody> {
                 return Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    ContainerWidget2(statusBarColor: widget.statusBarColor6,date: widget.date6,place: widget.place6,weatherCondition: widget.weatherCondition6,temperature: widget.temperature6,moisture: widget.moisture6,wind: widget.wind6,icon: widget.icon6,iconSize: widget.iconSize6,iconColor: widget.iconColor6,iconPositionedTop: widget.iconPositionedTop6,iconPositionedBottom: widget.iconPositionedBottom6,iconPositionedLeft: widget.iconPositionedLeft6,iconPositionedRight: widget.iconPositionedRight6, textPositionedTop: widget.textPositionedTop6,textPositionedBottom: widget.textPositionedBottom6,textPositionedLeft: widget.textPositionedLeft6,textPositionedRight: widget.textPositionedRight6,iconAlignment: widget.iconAlignment6,lineWidth: widget.lineWidth6,searchButtonColor: widget.searchButtonColor6),
+                    ContainerWidget2(statusBarColor: widget.statusBarColor6,date: widget.date6,place: widget.place6,weatherCondition: widget.weatherCondition6,temperature: widget.temperature6,moisture: widget.moisture6,wind: widget.wind6,icon: widget.icon6,iconSize: widget.iconSize6,iconColor: widget.iconColor6,iconPositionedTop: widget.iconPositionedTop6,iconPositionedBottom: widget.iconPositionedBottom6,iconPositionedLeft: widget.iconPositionedLeft6,iconPositionedRight: widget.iconPositionedRight6, textPositionedTop: widget.textPositionedTop6,textPositionedBottom: widget.textPositionedBottom6,textPositionedLeft: widget.textPositionedLeft6,textPositionedRight: widget.textPositionedRight6,iconAlignment: widget.iconAlignment6,lineWidth: widget.lineWidth6,searchButtonColor: widget.searchButtonColor6,minTemp: widget.minTemp6,maxTemp: widget.maxTemp6),
                     Padding(
                       padding: EdgeInsets.only(bottom: allHeight*0.05),
                       child: Container(
@@ -354,7 +358,7 @@ class _MainBodyState extends State<MainBody> {
                 return Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    ContainerWidget2(statusBarColor: widget.statusBarColor7,date: widget.date7,place: widget.place7,weatherCondition: widget.weatherCondition7,temperature: widget.temperature7,moisture: widget.moisture7,wind: widget.wind7,icon: widget.icon7,iconSize: widget.iconSize7,iconColor: widget.iconColor7,iconPositionedTop: widget.iconPositionedTop7,iconPositionedBottom: widget.iconPositionedBottom7,iconPositionedLeft: widget.iconPositionedLeft7,iconPositionedRight: widget.iconPositionedRight7, textPositionedTop: widget.textPositionedTop7,textPositionedBottom: widget.textPositionedBottom7,textPositionedLeft: widget.textPositionedLeft7,textPositionedRight: widget.textPositionedRight7,iconAlignment: widget.iconAlignment7,lineWidth: widget.lineWidth7,searchButtonColor: widget.searchButtonColor7),
+                    ContainerWidget2(statusBarColor: widget.statusBarColor7,date: widget.date7,place: widget.place7,weatherCondition: widget.weatherCondition7,temperature: widget.temperature7,moisture: widget.moisture7,wind: widget.wind7,icon: widget.icon7,iconSize: widget.iconSize7,iconColor: widget.iconColor7,iconPositionedTop: widget.iconPositionedTop7,iconPositionedBottom: widget.iconPositionedBottom7,iconPositionedLeft: widget.iconPositionedLeft7,iconPositionedRight: widget.iconPositionedRight7, textPositionedTop: widget.textPositionedTop7,textPositionedBottom: widget.textPositionedBottom7,textPositionedLeft: widget.textPositionedLeft7,textPositionedRight: widget.textPositionedRight7,iconAlignment: widget.iconAlignment7,lineWidth: widget.lineWidth7,searchButtonColor: widget.searchButtonColor7,minTemp: widget.minTemp7,maxTemp: widget.maxTemp7),
                     Padding(
                       padding: EdgeInsets.only(bottom: allHeight*0.05),
                       child: Container(
@@ -381,7 +385,7 @@ class _MainBodyState extends State<MainBody> {
                 return Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    ContainerWidget2(statusBarColor: widget.statusBarColor8,date: widget.date8,place: widget.place8,weatherCondition: widget.weatherCondition8,temperature: widget.temperature8,moisture: widget.moisture8,wind: widget.wind8,icon: widget.icon8,iconSize: widget.iconSize8,iconColor: widget.iconColor8,iconPositionedTop: widget.iconPositionedTop8,iconPositionedBottom: widget.iconPositionedBottom8,iconPositionedLeft: widget.iconPositionedLeft8,iconPositionedRight: widget.iconPositionedRight8, textPositionedTop: widget.textPositionedTop8,textPositionedBottom: widget.textPositionedBottom8,textPositionedLeft: widget.textPositionedLeft8,textPositionedRight: widget.textPositionedRight8,iconAlignment: widget.iconAlignment8,lineWidth: widget.lineWidth8,searchButtonColor: widget.searchButtonColor8),
+                    ContainerWidget2(statusBarColor: widget.statusBarColor8,date: widget.date8,place: widget.place8,weatherCondition: widget.weatherCondition8,temperature: widget.temperature8,moisture: widget.moisture8,wind: widget.wind8,icon: widget.icon8,iconSize: widget.iconSize8,iconColor: widget.iconColor8,iconPositionedTop: widget.iconPositionedTop8,iconPositionedBottom: widget.iconPositionedBottom8,iconPositionedLeft: widget.iconPositionedLeft8,iconPositionedRight: widget.iconPositionedRight8, textPositionedTop: widget.textPositionedTop8,textPositionedBottom: widget.textPositionedBottom8,textPositionedLeft: widget.textPositionedLeft8,textPositionedRight: widget.textPositionedRight8,iconAlignment: widget.iconAlignment8,lineWidth: widget.lineWidth8,searchButtonColor: widget.searchButtonColor8,minTemp: widget.minTemp8,maxTemp: widget.maxTemp8),
                     Padding(
                       padding: EdgeInsets.only(bottom: allHeight*0.05),
                       child: Container(

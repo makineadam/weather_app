@@ -38,6 +38,8 @@ class _HomePageState extends State<HomePage> {
   String weatherCondition,weatherCondition2,weatherCondition3,weatherCondition4,weatherCondition5,weatherCondition6,weatherCondition7,weatherCondition8;
   String place,place2,place3,place4,place5,place6,place7,place8;
   var temperature,temperature2,temperature3,temperature4,temperature5,temperature6,temperature7,temperature8;
+  var maxTemp2,maxTemp3,maxTemp4,maxTemp5,maxTemp6,maxTemp7,maxTemp8;
+  var minTemp2,minTemp3,minTemp4,minTemp5,minTemp6,minTemp7,minTemp8;
   var moisture,moisture2,moisture3,moisture4,moisture5,moisture6,moisture7,moisture8;
   var wind,wind2,wind3,wind4,wind5,wind6,wind7,wind8;
   IconData icon,icon2,icon3,icon4,icon5,icon6,icon7,icon8;
@@ -59,6 +61,7 @@ class _HomePageState extends State<HomePage> {
   double lineWidth,lineWidth2,lineWidth3,lineWidth4,lineWidth5,lineWidth6,lineWidth7,lineWidth8;
 
 
+
   @override
   void initState() {
     super.initState();
@@ -66,6 +69,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   void updateUI(dynamic weatherData, dynamic daysWeatherData) {
+
+    //------------------------------------------------1-------------------------------------------------\\
 
     weatherConditionID = weatherData['weather'][0]['id'];
 
@@ -331,6 +336,20 @@ class _HomePageState extends State<HomePage> {
       temperature2 = daysWeatherData['daily'][1]['temp']['day'];
     }
 
+    if(daysWeatherData['daily'][1]['temp']['max'] == double) {
+      var maxTempTemp2 = daysWeatherData['daily'][1]['temp']['max'];
+      maxTemp2 = maxTempTemp2.toInt();
+    }else{
+      maxTemp2 = daysWeatherData['daily'][1]['temp']['max'];
+    }
+
+    if(daysWeatherData['daily'][1]['temp']['min'] == double) {
+      var minTempTemp2 = daysWeatherData['daily'][1]['temp']['min'];
+      minTemp2 = minTempTemp2.toInt();
+    }else{
+      minTemp2 = daysWeatherData['daily'][1]['temp']['min'];
+    }
+
     moisture2 = daysWeatherData['daily'][1]['humidity'];
     wind2 = daysWeatherData['daily'][1]['wind_speed'];
 
@@ -469,6 +488,20 @@ class _HomePageState extends State<HomePage> {
       temperature3 = temp3.toInt();
     }else {
       temperature3 = daysWeatherData['daily'][2]['temp']['day'];
+    }
+
+    if(daysWeatherData['daily'][2]['temp']['max'] == double) {
+      var maxTempTemp3 = daysWeatherData['daily'][2]['temp']['max'];
+      maxTemp3 = maxTempTemp3.toInt();
+    }else{
+      maxTemp3 = daysWeatherData['daily'][2]['temp']['max'];
+    }
+
+    if(daysWeatherData['daily'][2]['temp']['min'] == double) {
+      var minTempTemp3 = daysWeatherData['daily'][2]['temp']['min'];
+      minTemp3 = minTempTemp3.toInt();
+    }else{
+      minTemp3 = daysWeatherData['daily'][2]['temp']['min'];
     }
 
     moisture3 = daysWeatherData['daily'][2]['humidity'];
@@ -611,6 +644,20 @@ class _HomePageState extends State<HomePage> {
       temperature4 = daysWeatherData['daily'][3]['temp']['day'];
     }
 
+    if(daysWeatherData['daily'][3]['temp']['max'] == double) {
+      var maxTempTemp4 = daysWeatherData['daily'][3]['temp']['max'];
+      maxTemp4 = maxTempTemp4.toInt();
+    }else{
+      maxTemp4 = daysWeatherData['daily'][3]['temp']['max'];
+    }
+
+    if(daysWeatherData['daily'][3]['temp']['min'] == double) {
+      var minTempTemp4 = daysWeatherData['daily'][3]['temp']['min'];
+      minTemp4 = minTempTemp4.toInt();
+    }else{
+      minTemp4 = daysWeatherData['daily'][3]['temp']['min'];
+    }
+
     moisture4 = daysWeatherData['daily'][3]['humidity'];
     wind4 = daysWeatherData['daily'][3]['wind_speed'];
 
@@ -749,6 +796,20 @@ class _HomePageState extends State<HomePage> {
       temperature5 = temp5.toInt();
     }else {
       temperature5 = daysWeatherData['daily'][4]['temp']['day'];
+    }
+
+    if(daysWeatherData['daily'][4]['temp']['max'] == double) {
+      var maxTempTemp5 = daysWeatherData['daily'][4]['temp']['max'];
+      maxTemp5 = maxTempTemp5.toInt();
+    }else{
+      maxTemp5 = daysWeatherData['daily'][4]['temp']['max'];
+    }
+
+    if(daysWeatherData['daily'][4]['temp']['min'] == double) {
+      var minTempTemp5 = daysWeatherData['daily'][4]['temp']['min'];
+      minTemp5 = minTempTemp5.toInt();
+    }else{
+      minTemp5 = daysWeatherData['daily'][4]['temp']['min'];
     }
 
     moisture5 = daysWeatherData['daily'][4]['humidity'];
@@ -891,6 +952,20 @@ class _HomePageState extends State<HomePage> {
       temperature6 = daysWeatherData['daily'][5]['temp']['day'];
     }
 
+    if(daysWeatherData['daily'][5]['temp']['max'] == double) {
+      var maxTempTemp6 = daysWeatherData['daily'][5]['temp']['max'];
+      maxTemp6 = maxTempTemp6.toInt();
+    }else{
+      maxTemp6 = daysWeatherData['daily'][5]['temp']['max'];
+    }
+
+    if(daysWeatherData['daily'][5]['temp']['min'] == double) {
+      var minTempTemp6 = daysWeatherData['daily'][5]['temp']['min'];
+      minTemp6 = minTempTemp6.toInt();
+    }else{
+      minTemp6 = daysWeatherData['daily'][5]['temp']['min'];
+    }
+
     moisture6 = daysWeatherData['daily'][5]['humidity'];
     wind6 = daysWeatherData['daily'][5]['wind_speed'];
 
@@ -1029,6 +1104,20 @@ class _HomePageState extends State<HomePage> {
       temperature7 = temp7.toInt();
     }else {
       temperature7 = daysWeatherData['daily'][6]['temp']['day'];
+    }
+
+    if(daysWeatherData['daily'][6]['temp']['max'] == double) {
+      var maxTempTemp7 = daysWeatherData['daily'][6]['temp']['max'];
+      maxTemp7 = maxTempTemp7.toInt();
+    }else{
+      maxTemp7 = daysWeatherData['daily'][6]['temp']['max'];
+    }
+
+    if(daysWeatherData['daily'][6]['temp']['min'] == double) {
+      var minTempTemp7 = daysWeatherData['daily'][6]['temp']['min'];
+      minTemp7 = minTempTemp7.toInt();
+    }else{
+      minTemp7 = daysWeatherData['daily'][6]['temp']['min'];
     }
 
     moisture7 = daysWeatherData['daily'][6]['humidity'];
@@ -1171,6 +1260,20 @@ class _HomePageState extends State<HomePage> {
       temperature8 = daysWeatherData['daily'][7]['temp']['day'];
     }
 
+    if(daysWeatherData['daily'][7]['temp']['max'] == double) {
+      var maxTempTemp8 = daysWeatherData['daily'][7]['temp']['max'];
+      maxTemp8 = maxTempTemp8.toInt();
+    }else{
+      maxTemp8 = daysWeatherData['daily'][7]['temp']['max'];
+    }
+
+    if(daysWeatherData['daily'][7]['temp']['min'] == double) {
+      var minTempTemp8 = daysWeatherData['daily'][7]['temp']['min'];
+      minTemp8 = minTempTemp8.toInt();
+    }else{
+      minTemp8 = daysWeatherData['daily'][7]['temp']['min'];
+    }
+
     moisture8 = daysWeatherData['daily'][7]['humidity'];
     wind8 = daysWeatherData['daily'][7]['wind_speed'];
 
@@ -1194,13 +1297,13 @@ class _HomePageState extends State<HomePage> {
     ));
 
     return MainBody(date: '$monthName $dayNo . $weekdayName',weatherCondition: '$weatherCondition',place: '$place',temperature: 'Temperature $temperature°C',moisture: 'Moisture $moisture%',icon: icon,wind: 'Wind $wind km/s',statusBarColor: backGroundColor,iconSize: iconSize,iconColor: iconColor,iconPositionedTop: iconPositionedTop,iconPositionedBottom: iconPositionedBottom,iconPositionedLeft: iconPositionedLeft,iconPositionedRight: iconPositionedRight,textPositionedTop: textPositionedTop,textPositionedBottom: textPositionedBottom,textPositionedLeft: textPositionedLeft,textPositionedRight: textPositionedRight,iconAlignment: iconAlignment,lineWidth: lineWidth,searchButtonColor: iconColor,
-                    date2: '$monthName2 $dayNo2 . $weekdayName2',weatherCondition2: '$weatherCondition2',place2: '$place2',temperature2: 'Temperature $temperature2°C',moisture2: 'Moisture $moisture2%',icon2: icon2,wind2: 'Wind $wind2 km/s',statusBarColor2: backGroundColor2,iconSize2: iconSize2,iconColor2: iconColor2,iconPositionedTop2: iconPositionedTop2,iconPositionedBottom2: iconPositionedBottom2,iconPositionedLeft2: iconPositionedLeft2,iconPositionedRight2: iconPositionedRight2,textPositionedTop2: textPositionedTop2,textPositionedBottom2: textPositionedBottom2,textPositionedLeft2: textPositionedLeft2,textPositionedRight2: textPositionedRight2,iconAlignment2: iconAlignment2,lineWidth2: lineWidth2,searchButtonColor2: iconColor2,
-                    date3: '$monthName3 $dayNo3 . $weekdayName3',weatherCondition3: '$weatherCondition3',place3: '$place3',temperature3: 'Temperature $temperature3°C',moisture3: 'Moisture $moisture3%',icon3: icon3,wind3: 'Wind $wind3 km/s',statusBarColor3: backGroundColor3,iconSize3: iconSize3,iconColor3: iconColor3,iconPositionedTop3: iconPositionedTop3,iconPositionedBottom3: iconPositionedBottom3,iconPositionedLeft3: iconPositionedLeft3,iconPositionedRight3: iconPositionedRight3,textPositionedTop3: textPositionedTop3,textPositionedBottom3: textPositionedBottom3,textPositionedLeft3: textPositionedLeft3,textPositionedRight3: textPositionedRight3,iconAlignment3: iconAlignment3,lineWidth3: lineWidth3,searchButtonColor3: iconColor3,
-                    date4: '$monthName4 $dayNo4 . $weekdayName4',weatherCondition4: '$weatherCondition4',place4: '$place4',temperature4: 'Temperature $temperature4°C',moisture4: 'Moisture $moisture4%',icon4: icon4,wind4: 'Wind $wind4 km/s',statusBarColor4: backGroundColor4,iconSize4: iconSize4,iconColor4: iconColor4,iconPositionedTop4: iconPositionedTop4,iconPositionedBottom4: iconPositionedBottom4,iconPositionedLeft4: iconPositionedLeft4,iconPositionedRight4: iconPositionedRight4,textPositionedTop4: textPositionedTop4,textPositionedBottom4: textPositionedBottom4,textPositionedLeft4: textPositionedLeft4,textPositionedRight4: textPositionedRight4,iconAlignment4: iconAlignment4,lineWidth4: lineWidth4,searchButtonColor4: iconColor4,
-                    date5: '$monthName5 $dayNo5 . $weekdayName5',weatherCondition5: '$weatherCondition5',place5: '$place5',temperature5: 'Temperature $temperature5°C',moisture5: 'Moisture $moisture5%',icon5: icon5,wind5: 'Wind $wind5 km/s',statusBarColor5: backGroundColor5,iconSize5: iconSize5,iconColor5: iconColor5,iconPositionedTop5: iconPositionedTop5,iconPositionedBottom5: iconPositionedBottom5,iconPositionedLeft5: iconPositionedLeft5,iconPositionedRight5: iconPositionedRight5,textPositionedTop5: textPositionedTop5,textPositionedBottom5: textPositionedBottom5,textPositionedLeft5: textPositionedLeft5,textPositionedRight5: textPositionedRight5,iconAlignment5: iconAlignment5,lineWidth5: lineWidth5,searchButtonColor5: iconColor5,
-                    date6: '$monthName6 $dayNo6 . $weekdayName6',weatherCondition6: '$weatherCondition6',place6: '$place6',temperature6: 'Temperature $temperature6°C',moisture6: 'Moisture $moisture6%',icon6: icon6,wind6: 'Wind $wind6 km/s',statusBarColor6: backGroundColor6,iconSize6: iconSize6,iconColor6: iconColor6,iconPositionedTop6: iconPositionedTop6,iconPositionedBottom6: iconPositionedBottom6,iconPositionedLeft6: iconPositionedLeft6,iconPositionedRight6: iconPositionedRight6,textPositionedTop6: textPositionedTop6,textPositionedBottom6: textPositionedBottom6,textPositionedLeft6: textPositionedLeft6,textPositionedRight6: textPositionedRight6,iconAlignment6: iconAlignment6,lineWidth6: lineWidth6,searchButtonColor6: iconColor6,
-                    date7: '$monthName7 $dayNo7 . $weekdayName7',weatherCondition7: '$weatherCondition7',place7: '$place7',temperature7: 'Temperature $temperature7°C',moisture7: 'Moisture $moisture7%',icon7: icon7,wind7: 'Wind $wind7 km/s',statusBarColor7: backGroundColor7,iconSize7: iconSize7,iconColor7: iconColor7,iconPositionedTop7: iconPositionedTop7,iconPositionedBottom7: iconPositionedBottom7,iconPositionedLeft7: iconPositionedLeft7,iconPositionedRight7: iconPositionedRight7,textPositionedTop7: textPositionedTop7,textPositionedBottom7: textPositionedBottom7,textPositionedLeft7: textPositionedLeft7,textPositionedRight7: textPositionedRight7,iconAlignment7: iconAlignment7,lineWidth7: lineWidth7,searchButtonColor7: iconColor7,
-                    date8: '$monthName8 $dayNo8 . $weekdayName8',weatherCondition8: '$weatherCondition8',place8: '$place8',temperature8: 'Temperature $temperature8°C',moisture8: 'Moisture $moisture8%',icon8: icon8,wind8: 'Wind $wind8 km/s',statusBarColor8: backGroundColor8,iconSize8: iconSize8,iconColor8: iconColor8,iconPositionedTop8: iconPositionedTop8,iconPositionedBottom8: iconPositionedBottom8,iconPositionedLeft8: iconPositionedLeft8,iconPositionedRight8: iconPositionedRight8,textPositionedTop8: textPositionedTop8,textPositionedBottom8: textPositionedBottom8,textPositionedLeft8: textPositionedLeft8,textPositionedRight8: textPositionedRight8,iconAlignment8: iconAlignment8,lineWidth8: lineWidth8,searchButtonColor8: iconColor8,);
+                    date2: '$monthName2 $dayNo2 . $weekdayName2',weatherCondition2: '$weatherCondition2',place2: '$place2',temperature2: 'Temperature $temperature2°C',maxTemp2: '$maxTemp2°C',minTemp2: '$minTemp2°C',moisture2: 'Moisture $moisture2%',icon2: icon2,wind2: 'Wind $wind2 km/s',statusBarColor2: backGroundColor2,iconSize2: iconSize2,iconColor2: iconColor2,iconPositionedTop2: iconPositionedTop2,iconPositionedBottom2: iconPositionedBottom2,iconPositionedLeft2: iconPositionedLeft2,iconPositionedRight2: iconPositionedRight2,textPositionedTop2: textPositionedTop2,textPositionedBottom2: textPositionedBottom2,textPositionedLeft2: textPositionedLeft2,textPositionedRight2: textPositionedRight2,iconAlignment2: iconAlignment2,lineWidth2: lineWidth2,searchButtonColor2: iconColor2,
+                    date3: '$monthName3 $dayNo3 . $weekdayName3',weatherCondition3: '$weatherCondition3',place3: '$place3',temperature3: 'Temperature $temperature3°C',maxTemp3: '$maxTemp3°C',minTemp3: '$minTemp3°C',moisture3: 'Moisture $moisture3%',icon3: icon3,wind3: 'Wind $wind3 km/s',statusBarColor3: backGroundColor3,iconSize3: iconSize3,iconColor3: iconColor3,iconPositionedTop3: iconPositionedTop3,iconPositionedBottom3: iconPositionedBottom3,iconPositionedLeft3: iconPositionedLeft3,iconPositionedRight3: iconPositionedRight3,textPositionedTop3: textPositionedTop3,textPositionedBottom3: textPositionedBottom3,textPositionedLeft3: textPositionedLeft3,textPositionedRight3: textPositionedRight3,iconAlignment3: iconAlignment3,lineWidth3: lineWidth3,searchButtonColor3: iconColor3,
+                    date4: '$monthName4 $dayNo4 . $weekdayName4',weatherCondition4: '$weatherCondition4',place4: '$place4',temperature4: 'Temperature $temperature4°C',maxTemp4: '$maxTemp4°C',minTemp4: '$minTemp4°C',moisture4: 'Moisture $moisture4%',icon4: icon4,wind4: 'Wind $wind4 km/s',statusBarColor4: backGroundColor4,iconSize4: iconSize4,iconColor4: iconColor4,iconPositionedTop4: iconPositionedTop4,iconPositionedBottom4: iconPositionedBottom4,iconPositionedLeft4: iconPositionedLeft4,iconPositionedRight4: iconPositionedRight4,textPositionedTop4: textPositionedTop4,textPositionedBottom4: textPositionedBottom4,textPositionedLeft4: textPositionedLeft4,textPositionedRight4: textPositionedRight4,iconAlignment4: iconAlignment4,lineWidth4: lineWidth4,searchButtonColor4: iconColor4,
+                    date5: '$monthName5 $dayNo5 . $weekdayName5',weatherCondition5: '$weatherCondition5',place5: '$place5',temperature5: 'Temperature $temperature5°C',maxTemp5: '$maxTemp5°C',minTemp5: '$minTemp5°C',moisture5: 'Moisture $moisture5%',icon5: icon5,wind5: 'Wind $wind5 km/s',statusBarColor5: backGroundColor5,iconSize5: iconSize5,iconColor5: iconColor5,iconPositionedTop5: iconPositionedTop5,iconPositionedBottom5: iconPositionedBottom5,iconPositionedLeft5: iconPositionedLeft5,iconPositionedRight5: iconPositionedRight5,textPositionedTop5: textPositionedTop5,textPositionedBottom5: textPositionedBottom5,textPositionedLeft5: textPositionedLeft5,textPositionedRight5: textPositionedRight5,iconAlignment5: iconAlignment5,lineWidth5: lineWidth5,searchButtonColor5: iconColor5,
+                    date6: '$monthName6 $dayNo6 . $weekdayName6',weatherCondition6: '$weatherCondition6',place6: '$place6',temperature6: 'Temperature $temperature6°C',maxTemp6: '$maxTemp6°C',minTemp6: '$minTemp6°C',moisture6: 'Moisture $moisture6%',icon6: icon6,wind6: 'Wind $wind6 km/s',statusBarColor6: backGroundColor6,iconSize6: iconSize6,iconColor6: iconColor6,iconPositionedTop6: iconPositionedTop6,iconPositionedBottom6: iconPositionedBottom6,iconPositionedLeft6: iconPositionedLeft6,iconPositionedRight6: iconPositionedRight6,textPositionedTop6: textPositionedTop6,textPositionedBottom6: textPositionedBottom6,textPositionedLeft6: textPositionedLeft6,textPositionedRight6: textPositionedRight6,iconAlignment6: iconAlignment6,lineWidth6: lineWidth6,searchButtonColor6: iconColor6,
+                    date7: '$monthName7 $dayNo7 . $weekdayName7',weatherCondition7: '$weatherCondition7',place7: '$place7',temperature7: 'Temperature $temperature7°C',maxTemp7: '$maxTemp7°C',minTemp7: '$minTemp7°C',moisture7: 'Moisture $moisture7%',icon7: icon7,wind7: 'Wind $wind7 km/s',statusBarColor7: backGroundColor7,iconSize7: iconSize7,iconColor7: iconColor7,iconPositionedTop7: iconPositionedTop7,iconPositionedBottom7: iconPositionedBottom7,iconPositionedLeft7: iconPositionedLeft7,iconPositionedRight7: iconPositionedRight7,textPositionedTop7: textPositionedTop7,textPositionedBottom7: textPositionedBottom7,textPositionedLeft7: textPositionedLeft7,textPositionedRight7: textPositionedRight7,iconAlignment7: iconAlignment7,lineWidth7: lineWidth7,searchButtonColor7: iconColor7,
+                    date8: '$monthName8 $dayNo8 . $weekdayName8',weatherCondition8: '$weatherCondition8',place8: '$place8',temperature8: 'Temperature $temperature8°C',maxTemp8: '$maxTemp8°C',minTemp8: '$minTemp8°C',moisture8: 'Moisture $moisture8%',icon8: icon8,wind8: 'Wind $wind8 km/s',statusBarColor8: backGroundColor8,iconSize8: iconSize8,iconColor8: iconColor8,iconPositionedTop8: iconPositionedTop8,iconPositionedBottom8: iconPositionedBottom8,iconPositionedLeft8: iconPositionedLeft8,iconPositionedRight8: iconPositionedRight8,textPositionedTop8: textPositionedTop8,textPositionedBottom8: textPositionedBottom8,textPositionedLeft8: textPositionedLeft8,textPositionedRight8: textPositionedRight8,iconAlignment8: iconAlignment8,lineWidth8: lineWidth8,searchButtonColor8: iconColor8,);
 
   }
 }

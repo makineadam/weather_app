@@ -8,13 +8,15 @@ class ContainerWidget2 extends StatelessWidget {
   ContainerWidget2({@required this.date,@required this.place,@required this.weatherCondition,@required this.temperature,@required this.moisture,@required this.wind,
     @required this.icon,@required this.statusBarColor,@required this.iconSize,@required this.iconColor,@required this.iconPositionedTop,@required this.iconPositionedBottom,
     @required this.iconPositionedLeft,@required this.iconPositionedRight,@required this.textPositionedTop,@required this.textPositionedBottom,@required this.textPositionedLeft,
-    @required this.textPositionedRight,@required this.iconAlignment,@required this.lineWidth,@required this.searchButtonColor,});
+    @required this.textPositionedRight,@required this.iconAlignment,@required this.lineWidth,@required this.searchButtonColor,@required this.maxTemp,@required this.minTemp,});
 
   final Color statusBarColor;
   final String date;
   final String place;
   final String weatherCondition;
   final String temperature;
+  final String maxTemp;
+  final String minTemp;
   final String moisture;
   final String wind;
   final IconData icon;
@@ -53,21 +55,15 @@ class ContainerWidget2 extends StatelessWidget {
                   Positioned(
                     top: allHeight*0.065,
                     left: allWidth*0.05,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: iconColor,
-                        borderRadius: BorderRadius.only(topLeft: Radius.circular(50), bottomLeft: Radius.circular(2), topRight: Radius.circular(6), bottomRight: Radius.circular(6)),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(date, style: TextStyle(fontSize: allWidth*0.06, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
-                          Padding(
-                            padding: EdgeInsets.only(right: allWidth*0.34),
-                            child: Text(place, style: TextStyle(fontSize: allWidth*0.06, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
-                          ),
-                        ],
-                      ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(date, style: TextStyle(fontSize: allWidth*0.06, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
+                        Padding(
+                          padding: EdgeInsets.only(right: allWidth*0.34),
+                          child: Text(place, style: TextStyle(fontSize: allWidth*0.06, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
+                        ),
+                      ],
                     ),
                   ),
                   //Weather
@@ -141,22 +137,31 @@ class ContainerWidget2 extends StatelessWidget {
           Divider(
             color: Colors.white, thickness: allHeight*0.001, indent: allHeight*0.02, height: allHeight*0.08,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(right: allWidth*0.2),
-                child: Text(temperature, style: TextStyle(fontSize: allHeight*0.035, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: allWidth*0.2, top: allHeight*0.007, bottom: allHeight*0.007),
-                child: Text(moisture, style: TextStyle(fontSize: allHeight*0.035, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: allWidth*0.2),
-                child: Text(wind, style: TextStyle(fontSize: allHeight*0.035, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
-              ),
-            ],
+          Padding(
+            padding: EdgeInsets.only(left: allWidth*0.06),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('Day $temperature', style: TextStyle(fontSize: allHeight*0.03, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
+                Padding(
+                  padding: EdgeInsets.only(top: allWidth*0.005),
+                  child: Row(
+                    children: [
+                      Text('Max: $maxTemp', style: TextStyle(fontSize: allHeight*0.03, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
+                      Padding(
+                        padding: EdgeInsets.only(left: allWidth*0.05),
+                        child: Text('Min: $minTemp', style: TextStyle(fontSize: allHeight*0.03, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: allHeight*0.01),
+                  child: Text(moisture, style: TextStyle(fontSize: allHeight*0.03, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
+                ),
+                Text(wind, style: TextStyle(fontSize: allHeight*0.03, fontWeight: FontWeight.bold, fontFamily: 'Comfortaa'),),
+              ],
+            ),
           ),
         ],
       ),
