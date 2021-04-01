@@ -232,10 +232,10 @@ class _MainBodyState extends State<MainBody> {
                           elevation: 2,
                           icon: Icon(
                             CupertinoIcons.back,color: Colors.white,),
-                          label: Text("Today",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
+                          label: Text("Days",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
                           backgroundColor: widget.searchButtonColor2,
                           onPressed: (){
-                            transformerPageController.animateToPage(0,
+                            transformerPageController.animateToPage(1,
                               duration: Duration(milliseconds: 400),
                               curve: Curves.easeInCirc,
                             );
@@ -259,10 +259,10 @@ class _MainBodyState extends State<MainBody> {
                           elevation: 2,
                           icon: Icon(
                             CupertinoIcons.back,color: Colors.white,),
-                          label: Text("Today",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
+                          label: Text("Days",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
                           backgroundColor: widget.searchButtonColor3,
                           onPressed: (){
-                            transformerPageController.animateToPage(0,
+                            transformerPageController.animateToPage(1,
                               duration: Duration(milliseconds: 400),
                               curve: Curves.easeInCirc,
                             );
@@ -286,10 +286,10 @@ class _MainBodyState extends State<MainBody> {
                           elevation: 2,
                           icon: Icon(
                             CupertinoIcons.back,color: Colors.white,),
-                          label: Text("Today",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
+                          label: Text("Days",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
                           backgroundColor: widget.searchButtonColor4,
                           onPressed: (){
-                            transformerPageController.animateToPage(0,
+                            transformerPageController.animateToPage(1,
                               duration: Duration(milliseconds: 400),
                               curve: Curves.easeInCirc,
                             );
@@ -313,10 +313,10 @@ class _MainBodyState extends State<MainBody> {
                           elevation: 2,
                           icon: Icon(
                             CupertinoIcons.back,color: Colors.white,),
-                          label: Text("Today",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
+                          label: Text("Days",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
                           backgroundColor: widget.searchButtonColor5,
                           onPressed: (){
-                            transformerPageController.animateToPage(0,
+                            transformerPageController.animateToPage(1,
                               duration: Duration(milliseconds: 400),
                               curve: Curves.easeInCirc,
                             );
@@ -340,10 +340,10 @@ class _MainBodyState extends State<MainBody> {
                           elevation: 2,
                           icon: Icon(
                             CupertinoIcons.back,color: Colors.white,),
-                          label: Text("Today",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
+                          label: Text("Days",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
                           backgroundColor: widget.searchButtonColor6,
                           onPressed: (){
-                            transformerPageController.animateToPage(0,
+                            transformerPageController.animateToPage(1,
                               duration: Duration(milliseconds: 400),
                               curve: Curves.easeInCirc,
                             );
@@ -367,10 +367,10 @@ class _MainBodyState extends State<MainBody> {
                           elevation: 2,
                           icon: Icon(
                             CupertinoIcons.back,color: Colors.white,),
-                          label: Text("Today",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
+                          label: Text("Days",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
                           backgroundColor: widget.searchButtonColor7,
                           onPressed: (){
-                            transformerPageController.animateToPage(0,
+                            transformerPageController.animateToPage(1,
                               duration: Duration(milliseconds: 400),
                               curve: Curves.easeInCirc,
                             );
@@ -394,10 +394,10 @@ class _MainBodyState extends State<MainBody> {
                           elevation: 2,
                           icon: Icon(
                             CupertinoIcons.back,color: Colors.white,),
-                          label: Text("Today",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
+                          label: Text("Days",style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: allWidth*0.037),),
                           backgroundColor: widget.searchButtonColor8,
                           onPressed: (){
-                            transformerPageController.animateToPage(0,
+                            transformerPageController.animateToPage(1,
                               duration: Duration(milliseconds: 400),
                               curve: Curves.easeInCirc,
                             );
