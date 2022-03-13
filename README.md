@@ -4,6 +4,7 @@ This is a weather application which gets your city by your location and shows we
 The User Interface and the design of page changes according to the weather condition user's city.
 
 Here is the screenshots of weather condition pages:
+###################################################
 
 
 <p float="left">
