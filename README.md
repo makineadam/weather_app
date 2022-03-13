@@ -5,13 +5,13 @@ The User Interface and the design of page changes according to the weather condi
 
 <div class="row">
   <div class="column">
-    <img src="screenshots/Clear.jpeg" style="width:100%">
+    <img src="screenshots/Clear.jpeg" width="100">
   </div>
   <div class="column">
-    <img src="screenshots/Snowy.jpeg" style="width:100%">
+    <img src="screenshots/Snowy.jpeg" width="100">
   </div>
   <div class="column">
-    <img src="screenshots/Rainy.jpeg" style="width:100%">
+    <img src="screenshots/Rainy.jpeg" width="100">
   </div>
 </div>
 
