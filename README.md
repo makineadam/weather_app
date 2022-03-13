@@ -23,6 +23,7 @@ Here is the screenshots of weather condition pages:
 #### Update to version 2:
 
 !! Added Next Days Button at bottom of the pages to navigate directly to the page that shows weather information of next 7 days briefly.
+!! Added animation when sliding pages.
 
 <p float="left">
   <img src="screenshots/7Days.jpeg" width="240" /> 
