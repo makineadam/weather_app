@@ -5,6 +5,7 @@ The User Interface and the design of page changes according to the weather condi
 
 Here is the screenshots of weather condition pages:
 
+
 <p float="left">
   <img src="screenshots/Clear.jpeg" width="240" />
   <img src="screenshots/Cloudy.jpeg" width="240" /> 
