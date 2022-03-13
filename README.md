@@ -27,6 +27,8 @@ Here is the screenshots of weather condition pages:
 !! The new 7 days information page's color scheme changes according to the weather condition.                                              
 !! Added animation when sliding pages.
 
+Here is the new features:  
+
 <p float="left">
   <img src="screenshots/7Days.jpeg" width="240" /> 
   <img src="screenshots/NextDays.jpeg" width="600" />
