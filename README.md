@@ -18,3 +18,9 @@ Here is the screenshots of weather condition pages:
 
 
 
+#### Update version 2:
+
+!! Added Next Days Button at bottom of the pages to navigate directly to the page that shows weather information of next 7 days briefly.
+
+
+
