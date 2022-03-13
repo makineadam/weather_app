@@ -7,10 +7,11 @@ The User Interface and the design of page changes according to the weather condi
   <img src="screenshots/Clear.jpeg" width="250" />
   <img src="screenshots/Cloudy.jpeg" width="250" /> 
   <img src="screenshots/Drizzle.jpeg" width="250" />
+  <img src="screenshots/Foggy.jpeg" width="250" />
 </p>
 
 <p float="left">
-  <img src="screenshots/Foggy.jpeg" width="300" />
+  
   <img src="screenshots/Snowy.jpeg" width="300" /> 
   <img src="screenshots/Rainy.jpeg" width="300" />
 </p>
