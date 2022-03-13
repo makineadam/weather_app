@@ -26,6 +26,6 @@ Here is the screenshots of weather condition pages:
 
 <p float="left">
   <img src="screenshots/7Days.jpeg" width="240" /> 
-  <img src="screenshots/NextDays.jpeg" width="700" />
+  <img src="screenshots/NextDays.jpeg" width="500" />
 </p>
 
